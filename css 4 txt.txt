@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-img {
+  /* The image used */
+  background-image: url("data:image/jpeg;base64,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");
+
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Add styles to the form container */
+.container {
+  position: absolute;
+  right: 0;
+  margin: 20px;
+  max-width: 300px;
+  padding: 16px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password],select {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit button */
+.btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+</style>
+</head>
+<body>
+
+
+<div class="bg-img">
+    
+
+<img id="backgroundImage" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRw335uqEsw1cCZVeNQQpCvRCoTFw2yNWdx8g&usqp=CAU">
+  <form id="departure" action="/action_page.php" class="container">
+    <h1 id="heading">Rocket around Earth</h1>
+    
+    <label id="dropDown" for="dropDown">Departure country</label><br>
+    
+    <select name="dropDown" id="dropDown">
+      
+      <option id="dropDown" value="india">India</option>
+      <option id="dropDown" value="uk">UK</option>
+      <option id="dropDown" value="us">US</option>
+      <option id="dropDown" value="australia">Australia</option>
+    </select>
+    
+    <label for="no of space travellers">no of travellers</label>
+<input type="text" id="noOfTravellers" placeholder="enter number of travellers"></input>
+    <label  id="email" for="email">Your Email</label>
+    <input type="text" value="default" placeholder="Enter Email" name="email" required>
+<p id="yesOrNo>
+   <label for="yesOrNo">Do you wanna rent a space suit</label><br>
+   <input name="yesOrNotype="radio" id="yesOrNo">Yes,Please</input><br>
+   <input name="yesOrNotype="radio" >No,I have my own</input><br>
+   </p>
+    <button type="submit" id="submit" class="btn">Take us to space</button>
+  </form>
+</div>
+</body>
+</html>
